@@ -15,7 +15,7 @@ spec:
         app: batch-task
     spec:
       containers:
-      - name: Batch-container 
+      - name: batch-container 
         image: busybox:latest
         command: ["sh", "-c", "echo Hello, Kubernetes! && sleep 30"]
       restartPolicy: Never
