@@ -29,3 +29,16 @@ spec:
         image: priyanshuprafful/notes-app-k8sp:latest
         ports:
         - containerPort: 8000
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: notes-app-service
+  namespace: django-notes-app
+selector:
+  app: notes-app
+ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000
