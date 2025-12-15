@@ -26,6 +26,7 @@ spec:
               mkdir -p /backups &&
               mkdir -p /demo-data &&
               cp -r /demo-data/ /backups/ &&
+              echo date: $(date)
               echo "Minute backup completed.";
             volumeMounts:
             - name: data-volume
