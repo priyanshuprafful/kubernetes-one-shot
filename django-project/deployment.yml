@@ -36,9 +36,11 @@ apiVersion: v1
 metadata:
   name: notes-app-service
   namespace: django-notes-app
-selector:
-  app: notes-app
-ports:
-  - protocol: TCP
-    port: 8000
-    targetPort: 8000
+spec:
+  selector:
+    app: notes-app
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+
