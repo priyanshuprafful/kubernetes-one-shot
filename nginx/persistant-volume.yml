@@ -1,4 +1,4 @@
-kind: PersistantVolume
+kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: local-pv
@@ -11,4 +11,6 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
-  hostPath: /mnt/data 
+  hostPath: 
+    path: /mnt/data
+    type: DirectoryOrCreate
