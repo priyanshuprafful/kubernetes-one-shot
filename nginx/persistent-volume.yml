@@ -10,8 +10,8 @@ spec:
     storage: 100Mi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
+  persistentVolumeReclaimPolicy: Retain # if deleted the PV will not be deleted
+  storageClassName: local-storage # we can use cloud storage network storage or some other too 
   hostPath: 
     path: /mnt/data
     type: DirectoryOrCreate
