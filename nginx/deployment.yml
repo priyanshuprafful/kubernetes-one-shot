@@ -22,7 +22,7 @@ spec:
         ports:
         - containerPort: 80   
         volumeMounts:
-        - mountPath: /usr/share/nginx/html
+        - mountPath: /var/www/html
           name: local-pv-claim-my-volume
       volumes:
       - name: local-pv-claim-my-volume
