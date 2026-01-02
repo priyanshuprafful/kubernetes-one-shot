@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-simple-project-ingress
+  name: nginx-simple-project-and-notes-app-ingress
   namespace: nginx
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
@@ -11,7 +11,7 @@ spec:
   - http:
       paths:
       - pathType: Prefix
-        path: /nginx
+        path: /nginx  
         backend:
           service:
             name: nginx-service
@@ -21,6 +21,6 @@ spec:
         path: /app
         backend:
           service:
-            name: hello-service
+            name: notes-app-service #hello-service
             port:
-              number: 80
+              number: 8000
