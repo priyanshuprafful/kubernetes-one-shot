@@ -1,9 +1,9 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: notes-app
-  labels:
-    app: notes-app
+# kind: Namespace
+# apiVersion: v1
+# metadata:
+#   name: notes-app
+#   labels:
+#     app: notes-app
 ---
 kind: Deployment
 apiVersion: apps/v1

@@ -1,12 +1,10 @@
-# simple-project.yaml
-
-# apiVersion: v1
-# kind: Namespace
-# metadata:            mere hisab se already nginx namespace bana hua hai
-#   name: nginx
-#   labels:
-
-# ---
+apiVersion: v1
+kind: Namespace
+metadata:            
+  name: nginx
+  labels:
+    app: nginx
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
