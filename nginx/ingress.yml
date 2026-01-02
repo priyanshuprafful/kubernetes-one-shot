@@ -18,7 +18,7 @@ spec:
             port:
               number: 80
       - pathType: Prefix
-        path: /app
+        path: /
         backend:
           service:
             name: notes-app-service #hello-service
