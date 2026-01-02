@@ -1,0 +1,46 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: notes-app
+  labels:
+    app: notes-app
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: notes-app-deployment
+  namespace: notes-app
+  labels:
+    app: notes-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes-app
+  template:
+    metadata: 
+      labels:
+        app: notes-app
+    spec:
+      containers:
+      - name: notes-app-container
+        image: priyanshuprafful/notes-app-k8s
+        ports:
+        - containerPort: 8000
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: notes-app-service
+  namespace: notes-app
+  labels:
+    app: notes-app
+spec:
+  selector:
+    app: notes-app  
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000
+  type: ClusterIP
+---
