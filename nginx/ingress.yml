@@ -14,7 +14,7 @@ spec:
         path: /nginx  
         backend:
           service:
-            name: nginx-service
+            name: hello-service
             port:
               number: 80
       - pathType: Prefix
