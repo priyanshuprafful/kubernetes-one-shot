@@ -28,7 +28,7 @@ spec:
         image: mysql:8.0
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: yourpassword
+          value: root
         - name: MYSQL_DATABASE
           value: exampledb
         ports:
@@ -44,7 +44,7 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 1Gi
+          storage: 100Mi
 
 ---
 kind: Service
